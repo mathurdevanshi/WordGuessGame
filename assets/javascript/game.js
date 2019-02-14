@@ -1,13 +1,13 @@
 /////////////////////////ARRAYS/////////////////////////
 var wordBank=[
-    'Baked Potatoes',
-    'Hash Browns',
-    'Mashed Potatoes',
-    'Potato Pancakes',
-    'Potato au Gratin',
-    'French Fries',
-    'Scalloped Potatoes',
-    'Twice Baked Potatoes'
+    'bakedpotatoes',
+    'hashbrowns',
+    'mashedpotatoes',
+    'potatopancakes',
+    'potatoaugratin',
+    'frenchfries',
+    'scallopedpotatoes',
+    'twicebakedpotatoes'
 ];
 var doubleLetter=[
     'a','b','c',
@@ -115,7 +115,7 @@ function compareLetters(letterGuessed){
         wrongLetters.push(letterGuessed);
         guessesLeft--;
         document.getElementById('numberGuesses').innerHTML=guessesLeft;
-        document.getElementById('wrongGuesses').innerHTML=wrongLetters;
+        document.getElementById('wrongGuess').innerHTML=wrongLetters;
         console.log('Wrong Letters=' + wrongLetters);
         console.log('Guesses left are'+guessesLeft);
     }
@@ -144,8 +144,12 @@ document.onkeyup=function(event){
     letterGuessed=event.key;
     for(var i=0; i< doubleLetter.length; i++){
         if(letterGuessed === doubleLetter[i] && test === true){
+            doubleLetter.splice(i,1);
             compareLetters(letterGuessed);
             winLose();
         }
     }
 }
+
+
+//Items still need to work on: how to work with spaces in words

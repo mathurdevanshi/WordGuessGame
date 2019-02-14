@@ -1,3 +1,14 @@
-h1{
-    color:red;
+body{
+    /* background: url('assets/images/wallpaper.png');
+    background-repeat: repeat-x repeat-y; */
+    background-color: burlywood;
+}
+.jumbotron{
+    text-align: center;
+    background-image: url('assets/images/potatocartoon.png');
+}
+
+img{
+    width: 300px;
+    height: 400px;
 }
